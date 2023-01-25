@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="popup">
+        <button id="close">&times;</button>
+        <h2>Name</h2>
+        <input type="text" name="" id="userName">
+        <a id="letsgo" href="#">Let's Go</a>
+    </div>
+
+
+    <header id="header">
+        <img id="headerImg" src="./img/ThePlayGround2000px.png" alt="" srcset="">
+    </header>
+
+    <main name="games_container bgColor">
+        <section name="buttons">
+            <img id="snakeImg" src="./img/Snake1.png" alt="" srcset="">
+            <img id="piongImg" src="./img/pingpong.png" alt="" srcset="">
+        </section>
+        
+        <canvas id="arenaCanvas" width="400" height="400"></canvas>
+        <section id="recordSect">
+            <h4>RECORD:</h4><p id="recordVal">0</p>
+        </section>
+    </main>
+    
+    <footer name="bgColor"><p id="footerText"></p></footer>
+    <script src="./js/index.js"></script>
+</body>
+</html>

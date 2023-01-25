@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+    border: 0px;
+    padding:0px;
+}
+
+#header{
+    background: rgb(204, 204, 240);
+    text-align: center;
+}
+
+#headerImg{
+    background: rgb(204, 204, 240);
+    width: 70%;
+}
+
+main{
+    background-color: rgb(238, 223, 223);
+    text-align: center;
+    /* height: 600px; */
+
+}
+.buttons{
+    border: 2px solid black;
+    text-align: center;
+    font-family: comic-sans;
+}
+
+img{
+    margin-top: 10px;
+    width: 50px;
+}
+
+
+footer{
+    text-align: center;
+    margin-bottom: 0;
+    /* background-color: rgb(238, 223, 223); */
+}
+
+.bgColor{
+    background-color: rgb(32, 31, 31);
+}
+
+/* POP UP WINDOW */
+.popup{
+    background-color: #ffffff;
+    width: 420px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none; 
+    text-align: center;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    background: #03549a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup h2{
+  margin-top: -20px;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+.popup input{
+    border-radius: 20px;
+}
+a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+h2{
+    font-family: 'Comic Neue', cursive;
+}
