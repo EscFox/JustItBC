@@ -1,7 +1,8 @@
 // global funcionality
 let myFooter = document.getElementById('footerText');
-myFooter.innerText=`©The Fox Play-Ground ${new Date().getFullYear()}`
+myFooter.innerText=`The Fox Play-Ground © ${new Date().getFullYear()}`
 
+let player="";
 
 
 let snakeImg = document.getElementById('snakeImg');
@@ -260,29 +261,37 @@ function playSnake(){
 
 }
 
-
+function changeNamePlayer(player){
+    
+    
+    document.getElementById('playerName').innerHTML=player + " Record:";
+}
 
 //funcinality for the pop-up window
-
-
-
-
+let usrNameQs="";
 window.addEventListener("load", function open(e){
+            
             document.querySelector(".popup").style.display = "block";
-        });
-
+            usrNameQs=document.querySelector("#userName");
+            console.log(`usrName when loading ${usrNameQs}`);
+            usrNameQs.value="";
+            changeNamePlayer("");
+});
 
 document.querySelector("#close").addEventListener("click", (e)=>{
-    console.log(e);
+    // console.log(e);
     document.querySelector(".popup").style.display = "none";
 });
 document.querySelector("#letsgo").addEventListener("click", (e)=>{
-    console.log(e);
+    // console.log(e);
+    let nameId = document.querySelector("#userName");
+    player=nameId.value;
+    console.log(player);
+    changeNamePlayer(player);
+    
     document.querySelector(".popup").style.display = "none";
 });
 
-document.querySelector("#userName").addEventListener("click",(e)=>{
-    console.log(e);
-    e.target.style.fontfamily= "Comic Neue, cursive";
-});
+
+//how to make the background not clickable when the popup is still visible.
 
