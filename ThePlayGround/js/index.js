@@ -57,7 +57,7 @@ piongImg.addEventListener('click',(e)=>{
     // playPingPong();
 });
 
-
+///SNAKE GAME FUNCIONALITY
 function playSnake(){
     const canvas = document.getElementById("arenaCanvas");
     const ctx = canvas.getContext("2d");
@@ -262,48 +262,65 @@ function playSnake(){
 }
 
 function changeNamePlayer(player){
-    
-    
     document.getElementById('playerName').innerHTML=player + " Record:";
 }
 
-//funcinality for the pop-up window
+function showHideBlockingDiv(){
+  let disabled=document.getElementById("disableDiv");
+
+  if(disabled.style.display!="none") {
+      disabled.style.display="none";
+  }
+  else{ 
+    disabled.style.display="block";  
+  }
+}
+
+//pop-up window FUNCIONALITY
 let usrNameQs="";
 
-window.addEventListener("load",(e)=>{
-            
-            document.querySelector(".popup").style.display = "block";
-            usrNameQs=document.querySelector("#userName");
-            console.log(`usrName when loading ${usrNameQs}`);
-            usrNameQs.value="";
-            changeNamePlayer("");
-});
+function loadPopUp(){
+    setTimeout(function(){
+      document.querySelector(".popup").style.display = "block";
+      usrNameQs=document.querySelector("#userName");
+      console.log(`usrName when loading ${usrNameQs}`);
+      usrNameQs.value="";
+      changeNamePlayer("");
+  },2000)
+}
+
+window.addEventListener("load",loadPopUp());
 
 
-// window.addEventListener("load",(e)=>{
-            
+// window.addEventListener("load",()=>{
+//             //showHideBlockingDiv();
+
 //             document.querySelector(".popup").style.display = "block";
 //             usrNameQs=document.querySelector("#userName");
 //             console.log(`usrName when loading ${usrNameQs}`);
-//             usrNameQs.value="";
+
+//             //usrNameQs.value=""; //forcing to assing value to "" as it kept the previous value
 //             changeNamePlayer("");
 // });
 
-document.querySelector("#close").addEventListener("click", (e)=>{
+document.querySelector("#close").addEventListener("click", ()=>{
     // console.log(e);
+    showHideBlockingDiv();
     document.querySelector(".popup").style.display = "none";
 });
-document.querySelector("#letsgo").addEventListener("click", (e)=>{
+document.querySelector("#letsgo").addEventListener("click", ()=>{
     // console.log(e);
+    showHideBlockingDiv();
     let nameId = document.querySelector("#userName");
     player=nameId.value;
-    console.log(player);
+    //console.log(player);
     changeNamePlayer(player);
     
     document.querySelector(".popup").style.display = "none";
 });
 
 
+//How to delay the popup load event.
 //how to make the background not clickable when the popup is still visible.
-//How to delay the load of the popup
+
 

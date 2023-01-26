@@ -13,12 +13,18 @@
 
 </head>
 <body>
-
+    <div id="disableDiv"></div>
     <div class="popup">
-        <button id="close">&times;</button>
-        <h2>Name</h2>
-        <input type="text" name="" id="userName">
-        <a id="letsgo" href="#">Let's Play</a>
+        
+        <form>
+            <button  id="close">&times;</button>
+            <h2>Player</h2>
+
+            <input type="text" name="username" id="userName" required>
+            <a id="letsgo" href="#">Let's Play</a>
+        
+            <!-- <button type="button" name="" id="letsgo" >let's play</button> -->
+        </form>
     </div>
 
 
@@ -26,10 +32,10 @@
         <img id="headerImg" src="./img/ThePlayGround2000px.png" alt="" srcset="">
     </header>
 
-    <main name="games_container bgColor">
-        <section name="buttons">
-            <img name="zoom" id="snakeImg" src="./img/Snake1.png" alt="" srcset="">
-            <img name="zoom" id="piongImg" src="./img/pingpong.png" alt="" srcset="">
+    <main class="games_container">
+        <section class="buttons">
+            <img class="zoom" id="snakeImg" src="./img/Snake1.png" alt="" srcset="">
+            <img class="zoom" id="piongImg" src="./img/pingpong.png" alt="" srcset="">
         </section>
         
         <canvas id="arenaCanvas" width="400" height="400"></canvas>
@@ -38,7 +44,7 @@
         </section>
     </main>
     
-    <footer name="bgColor"><p id="footerText"></p></footer>
+    <footer><p id="footerText"></p></footer>
     <script src="./js/index.js"></script>
 </body>
 </html>
