@@ -280,28 +280,16 @@ function showHideBlockingDiv(){
 let usrNameQs="";
 
 function loadPopUp(){
-    setTimeout(function(){
+    setTimeout(()=>{
       document.querySelector(".popup").style.display = "block";
       usrNameQs=document.querySelector("#userName");
       console.log(`usrName when loading ${usrNameQs}`);
       usrNameQs.value="";
       changeNamePlayer("");
-  },2000)
+  },500);
 }
 
 window.addEventListener("load",loadPopUp());
-
-
-// window.addEventListener("load",()=>{
-//             //showHideBlockingDiv();
-
-//             document.querySelector(".popup").style.display = "block";
-//             usrNameQs=document.querySelector("#userName");
-//             console.log(`usrName when loading ${usrNameQs}`);
-
-//             //usrNameQs.value=""; //forcing to assing value to "" as it kept the previous value
-//             changeNamePlayer("");
-// });
 
 document.querySelector("#close").addEventListener("click", ()=>{
     // console.log(e);
@@ -320,7 +308,6 @@ document.querySelector("#letsgo").addEventListener("click", ()=>{
 });
 
 
-//How to delay the popup load event.
-//how to make the background not clickable when the popup is still visible.
+
 
 
