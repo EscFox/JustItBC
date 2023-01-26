@@ -269,7 +269,8 @@ function changeNamePlayer(player){
 
 //funcinality for the pop-up window
 let usrNameQs="";
-window.addEventListener("load", function open(e){
+
+window.addEventListener("load",(e)=>{
             
             document.querySelector(".popup").style.display = "block";
             usrNameQs=document.querySelector("#userName");
@@ -277,6 +278,16 @@ window.addEventListener("load", function open(e){
             usrNameQs.value="";
             changeNamePlayer("");
 });
+
+
+// window.addEventListener("load",(e)=>{
+            
+//             document.querySelector(".popup").style.display = "block";
+//             usrNameQs=document.querySelector("#userName");
+//             console.log(`usrName when loading ${usrNameQs}`);
+//             usrNameQs.value="";
+//             changeNamePlayer("");
+// });
 
 document.querySelector("#close").addEventListener("click", (e)=>{
     // console.log(e);
@@ -294,4 +305,5 @@ document.querySelector("#letsgo").addEventListener("click", (e)=>{
 
 
 //how to make the background not clickable when the popup is still visible.
+//How to delay the load of the popup
 

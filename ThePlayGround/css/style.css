@@ -1,3 +1,6 @@
+@media (max-width: 800px) {
+    html { font-size: 10px; }
+    }
 body{
     margin: 0px;
     border: 0px;
@@ -11,14 +14,13 @@ body{
 
 #headerImg{
     background: rgb(204, 204, 240);
-    width: 70%;
+    /* width: 70%; */
+    width: 70rem;
 }
 
 main{
     background-color: rgb(238, 223, 223);
     text-align: center;
-    /* height: 600px; */
-
 }
 .buttons{
     border: 2px solid black;
@@ -26,10 +28,14 @@ main{
     font-family: comic-sans;
 }
 
-img{
-    margin-top: 10px;
-    width: 50px;
-    
+/* #headerImg{
+    width: 50rem;
+} */
+
+section img{
+    margin: 10px;
+    /* width: 50px; */
+    width: 5rem;
 }
 
 #snakeImg:hover {
@@ -48,6 +54,11 @@ footer{
 
 .bgColor{
     background-color: rgb(32, 31, 31);
+}
+
+h4,p{
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
 }
 
 /* POP UP WINDOW */
@@ -107,6 +118,7 @@ a{
 
 h2{
     font-family: 'Comic Neue', cursive;
+    font-size: 20px;
 }
 #username{
     font-family: 'Comic Neue', cursive;
